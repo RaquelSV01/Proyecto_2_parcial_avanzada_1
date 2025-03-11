@@ -1,14 +1,21 @@
 package com.example.application.data;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.Email;
 import java.time.LocalDate;
 
 @Entity
 public class SamplePerson extends AbstractEntity {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id; // Volvemos a la clave primaria Long
+
     private String firstName;
-    private String lastName;
+    private String lastName; // No. de Cuenta (no será la clave primaria aquí)
     @Email
     private String email;
     private String phone;
@@ -17,6 +24,14 @@ public class SamplePerson extends AbstractEntity {
     private String role;
     private boolean important;
 
+    // Getters y setters...
+
+    public Long getId() {
+        return id;
+    }
+    public void setId(Long id) {
+        this.id = id;
+    }
     public String getFirstName() {
         return firstName;
     }
@@ -65,5 +80,5 @@ public class SamplePerson extends AbstractEntity {
     public void setImportant(boolean important) {
         this.important = important;
     }
-
 }
+

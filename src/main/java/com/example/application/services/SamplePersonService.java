@@ -2,43 +2,30 @@ package com.example.application.services;
 
 import com.example.application.data.SamplePerson;
 import com.example.application.data.SamplePersonRepository;
-import java.util.Optional;
-import org.springframework.data.domain.Page;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class SamplePersonService {
+    @Autowired
+    private SamplePersonRepository repository;
 
-    private final SamplePersonRepository repository;
-
-    public SamplePersonService(SamplePersonRepository repository) {
-        this.repository = repository;
+    public void save(SamplePerson person) {
+        repository.save(person);
     }
 
-    public Optional<SamplePerson> get(Long id) {
-        return repository.findById(id);
+    public List<SamplePerson> list(Pageable pageable) {
+        return repository.findAll(pageable).getContent();
     }
 
-    public SamplePerson save(SamplePerson entity) {
-        return repository.save(entity);
-    }
-
-    public void delete(Long id) {
+    public void deleteById(Long id) {
         repository.deleteById(id);
     }
-
-    public Page<SamplePerson> list(Pageable pageable) {
-        return repository.findAll(pageable);
-    }
-
-    public Page<SamplePerson> list(Pageable pageable, Specification<SamplePerson> filter) {
-        return repository.findAll(filter, pageable);
-    }
-
-    public int count() {
-        return (int) repository.count();
-    }
-
 }
+
+
+
