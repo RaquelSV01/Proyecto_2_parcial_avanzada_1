@@ -249,14 +249,25 @@ layoutColumn3.add(buttonDelete);
 
     private void setComboBoxSampleData(ComboBox<SampleItem> comboBox) {
         List<SampleItem> sampleItems = new ArrayList<>();
-        sampleItems.add(new SampleItem("Ingeniería en Sistemas", "Ingeniería en Sistemas", null));
+        sampleItems.add(new SampleItem("Ingeniería en Computación", "Ingeniería en Computación", null));
+        sampleItems.add(new SampleItem("Ingeniería en Sistemas", "Ingeniería en Sistemas", Boolean.TRUE));;
         sampleItems.add(new SampleItem("Ingeniería en Electrónica", "Ingeniería en Electrónica", null));
-        sampleItems.add(new SampleItem("Ingeniería Mecatrónica", "Ingeniería Mecatrónica", Boolean.TRUE));
-        sampleItems.add(new SampleItem("Ingeniería Producción Industrial", "Ingeniería Producción Industrial", null));
+        sampleItems.add(new SampleItem("Ingeniería en Mecatrónica", "Ingeniería en Mecatrónica", null));
+        sampleItems.add(new SampleItem("Ingeniería en Producción Industrial", "Ingeniería en Producción Industrial", null));
         sampleItems.add(new SampleItem("Licenciatura en Turismo", "Licenciatura en Turismo", null));
-        sampleItems.add(new SampleItem("Licenciatura en Relaciones Industriales", "Licenciatura en Relaciones Industriales", null));
-        sampleItems.add(new SampleItem("Licenciatura en Gerencia de Negocios", "Licenciatura en Gerencia de Negocios", null));
         sampleItems.add(new SampleItem("Licenciatura en Derecho", "Licenciatura en Derecho", null));
+        sampleItems.add(new SampleItem("Licenciatura en Relaciones Industriales", "Licenciatura en Relaciones Industriales", null));
+        sampleItems.add(new SampleItem("Licenciatura en Comercio y Negocios Internacionales", "Licenciatura en Comercio y Negocios Internacionales", null));
+        sampleItems.add(new SampleItem("Licenciatura en Contaduría Financiera", "Licenciatura en Contaduría Financiera", null));
+        sampleItems.add(new SampleItem("Licenciatura en Marketing", "Licenciatura en Marketing", null));
+        sampleItems.add(new SampleItem("Licenciatura en Gerencia de Negocios", "Licenciatura en Gerencia de Negocios", null));
+        sampleItems.add(new SampleItem("Licenciatura en Ingeniería Financiera", "Licenciatura en Ingeniería Financiera", null));
+        sampleItems.add(new SampleItem("Licenciatura en Informática Administrativa", "Licenciatura en Informática Administrativa", null));
+        sampleItems.add(new SampleItem("Licenciatura en Gerencia de Negocios Agro-Cafetaleros", "Licenciatura en Gerencia de Negocios Agro-Cafetaleros", null));
+        sampleItems.add(new SampleItem("Licenciatura en Emprendimiento Gerencial", "Licenciatura en Emprendimiento Gerencial", null));
+        sampleItems.add(new SampleItem("Licenciatura en Psicología", "Licenciatura en Psicología", null));
+        sampleItems.add(new SampleItem("Licenciatura en Recursos Humanos", "Licenciatura en Recursos Humanos", null));
+        sampleItems.add(new SampleItem("Licenciatura en Comunicación Corporativa y Relaciones Públicas", "Licenciatura en Comunicación Corporativa y Relaciones Públicas", null));
 
         comboBox.setItems(new ArrayList<>(sampleItems));
         comboBox.setItemLabelGenerator(SampleItem::label);
@@ -264,12 +275,20 @@ layoutColumn3.add(buttonDelete);
 
     private void setComboBoxSampleDataForSecond(ComboBox<SampleItem> comboBox2) {
         List<SampleItem> sampleItems = new ArrayList<>();
-        sampleItems.add(new SampleItem("San Pedro Sula", "San Pedro Sula", null));
-        sampleItems.add(new SampleItem("Tegucigalpa", "Tegucigalpa", null));
-        sampleItems.add(new SampleItem("Santa Bárbara", "Santa Bárbara", Boolean.TRUE));
+        sampleItems.add(new SampleItem("San Pedro Sula", "San Pedro Sula", Boolean.TRUE));
+        sampleItems.add(new SampleItem("La Ceiba", "La Ceiba", null));
         sampleItems.add(new SampleItem("Puerto Cortés", "Puerto Cortés", null));
+        sampleItems.add(new SampleItem("El Progreso", "El Progreso", null));
+        sampleItems.add(new SampleItem("Santa Bárbara", "Santa Bárbara", null));
+        sampleItems.add(new SampleItem("Tegucigalpa", "Tegucigalpa", null));
         sampleItems.add(new SampleItem("Roatán", "Roatán", null));
+        sampleItems.add(new SampleItem("Siguatepeque", "Siguatepeque", null));
+        sampleItems.add(new SampleItem("Tocoa", "Tocoa", null));
+        sampleItems.add(new SampleItem("Choluteca", "Choluteca", null));
+        sampleItems.add(new SampleItem("Choloma", "Choloma", null));
+        sampleItems.add(new SampleItem("Juticalpa", "Juticalpa", null));
         sampleItems.add(new SampleItem("Cofradía", "Cofradía", null));
+        sampleItems.add(new SampleItem("Villanueva", "Villanueva", null));
 
         comboBox2.setItems(new ArrayList<>(sampleItems));
         comboBox2.setItemLabelGenerator(SampleItem::label);
